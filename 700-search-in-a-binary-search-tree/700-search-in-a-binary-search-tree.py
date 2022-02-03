@@ -14,9 +14,13 @@ class Solution:
         
         while not q.empty(): 
             curr_node = q.get()
+            if curr_node is None: 
+                return None
+                
             if curr_node.val == val: 
                 return curr_node
-            if curr_node.left: 
+    
+            if curr_node.val > val: 
                 q.put(curr_node.left)
-            if curr_node.right: 
+            if curr_node.val < val: 
                 q.put(curr_node.right)
