@@ -19,24 +19,9 @@ class Solution:
         
         """
         
-        n = len(nums)
-    
-        if nums[-1] < target : 
-            return n
-        if nums[-1] == target: 
-            return n-1
-        if nums[0] > target: 
-            return 0
-        if nums[0] == target: 
-            return 0
+        nums.append(target)
+        nums = sorted(nums)
         
-        
-        for i in range(n-1): 
-            if nums[i] == target: 
-                return i
-            elif nums[i] < target and nums[i+1] > target: 
-                return i + 1
-            
-       
+        return nums.index(target)
             
         
