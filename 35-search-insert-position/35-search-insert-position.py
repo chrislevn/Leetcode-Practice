@@ -41,24 +41,16 @@ class Solution:
 
         
         left, right = 0, len(nums)-1
-        
-        if nums[0] == target: 
-            return 0
-        if nums[-1] < target: 
-            return right + 1
-        if nums[0] > target: 
-            return 0
-    
-        while (right - left) > 1:
+        while left <= right:
             mid = (left+right+1) // 2
             if nums[mid] == target: 
                 return mid
             elif nums[mid] < target: 
-                left = mid
+                left = mid + 1
             else: 
-                right = mid
+                right = mid - 1
                 
-        return left + 1
+        return left 
         
         
         
