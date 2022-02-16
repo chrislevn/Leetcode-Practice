@@ -10,8 +10,9 @@ var maxProfit = function(prices) {
     var result = 0; 
     
     for (var i = 1; i < prices.length; i++) {
-        if (prices[i] - prices[index] > 0) {
-            result = Math.max(result, prices[i] - prices[index])
+        let remain = prices[i] - prices[index];
+        if (remain > 0) {
+            result = Math.max(result, remain)
         } else {
             index = i;
         }
