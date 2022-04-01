@@ -1,9 +1,15 @@
-class Solution:
-    def targetIndices(self, nums: List[int], target: int) -> List[int]:
-        nums.sort()
-        result = []
-        for i in range(len(nums)): 
-            if nums[i] == target: 
-                result.append(i)
-                
-        return result
+class Solution {
+public:
+    vector<int> targetIndices(vector<int>& nums, int target) {
+        sort(nums.begin(), nums.end());
+        vector<int> result; 
+        
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] == target) {
+                result.push_back(i);
+            }
+        }
+        
+        return result;
+    }
+};
