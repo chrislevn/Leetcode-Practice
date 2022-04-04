@@ -1,7 +1,5 @@
 class Solution:
-    def buildArray(self, target: List[int], n: int) -> List[str]:
-        # fullList = [x for x in range(1, n+1)]
-        
+    def buildArray(self, target: List[int], n: int) -> List[str]:        
         result = []
         start = 1
         
