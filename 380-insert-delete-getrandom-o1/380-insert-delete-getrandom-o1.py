@@ -1,4 +1,4 @@
-import random
+from random import choice
 class RandomizedSet:
 
     def __init__(self):
@@ -19,8 +19,7 @@ class RandomizedSet:
             return False
         
     def getRandom(self) -> int:
-        newRandom = int(random.sample(self.set, 1)[0])
-        return newRandom
+        return choice(list(self.set))
         
 
 
