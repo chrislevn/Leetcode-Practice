@@ -1,8 +1,6 @@
-from collections import OrderedDict 
-
 class Solution:
     def largestUniqueNumber(self, nums: List[int]) -> int:
-        hashTable = OrderedDict()
+        hashTable = {}
         res = -1
         
         for num in nums: 
