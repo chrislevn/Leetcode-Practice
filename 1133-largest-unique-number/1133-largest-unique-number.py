@@ -1,6 +1,6 @@
 class Solution:
     def largestUniqueNumber(self, nums: List[int]) -> int:
-        hashTable = {}
+        hashTable = dict()
         res = -1
         
         for num in nums: 
