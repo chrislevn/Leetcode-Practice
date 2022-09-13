@@ -5,8 +5,7 @@ class Solution:
         
         for i in range(length): 
             curr = rungs[i]
-            if (curr - pre) > dist: 
-                res += (curr - pre - 1) // dist
+            res += (curr - pre - 1) // dist
             pre = curr
         return res
             
