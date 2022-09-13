@@ -7,5 +7,6 @@ class Solution:
             curr = rungs[i]
             res += (curr - pre - 1) // dist
             pre = curr
+        
         return res
             
