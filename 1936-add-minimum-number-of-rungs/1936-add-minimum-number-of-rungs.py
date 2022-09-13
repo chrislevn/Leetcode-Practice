@@ -4,9 +4,8 @@ class Solution:
         length = len(rungs)
         
         for i in range(length): 
-            curr = rungs[i]
-            res += (curr - pre - 1) // dist
-            pre = curr
+            res += (rungs[i] - pre - 1) // dist
+            pre = rungs[i]
         
         return res
             
