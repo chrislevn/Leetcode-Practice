@@ -1,14 +1,10 @@
 class Solution:
     def mostFrequent(self, nums: List[int], key: int) -> int:
-        freqDict = {}
-        temp, res = -1, 0
-        for i in range(len(nums)-1): 
-            if nums[i] == key: 
-                if nums[i+1] not in freqDict: 
-                    freqDict[nums[i+1]] = 1
-                else: 
-                    freqDict[nums[i+1]] += 1
-                if freqDict[nums[i+1]] > temp: 
-                    temp = freqDict[nums[i+1]]
-                    res = nums[i+1]
-        return res
+        counts = {}
+        
+        for i in range(1,len(nums)):
+            if nums[i-1]==key:
+                if nums[i] not in counts: counts[nums[i]] = 1
+                else: counts[nums[i]] += 1
+        
+        return max(counts, key=counts.get)
