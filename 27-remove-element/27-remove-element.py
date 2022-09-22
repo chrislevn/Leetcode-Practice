@@ -4,5 +4,6 @@ class Solution:
         for i in range(length-1, -1, -1): 
             if nums[i] == val: 
                 del nums[i]
+                nums.append(None)
                 length -= 1
         return length
