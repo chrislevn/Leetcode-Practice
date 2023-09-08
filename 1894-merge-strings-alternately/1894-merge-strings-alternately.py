@@ -9,12 +9,8 @@ class Solution:
 
         currIndex += 1
         if len(word1) > len(word2): 
-            while currIndex < len(word1): 
-                resultText += word1[currIndex]
-                currIndex += 1
+            resultText += word1[currIndex:]
         elif len(word1) < len(word2):
-             while currIndex < len(word2): 
-                resultText += word2[currIndex]
-                currIndex += 1
+            resultText += word2[currIndex:]
 
         return resultText
